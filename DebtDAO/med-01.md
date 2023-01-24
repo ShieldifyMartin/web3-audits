@@ -1,4 +1,4 @@
-# M-01 Return values of `transfer()`/`transferFrom()` not checked
+# [M-01] Return values of `transfer()`/`transferFrom()` not checked
 
 https://github.com/debtdao/Line-of-Credit/blob/audit/code4rena-2022-11-03/contracts/utils/LineLib.sol#L46
 https://github.com/debtdao/Line-of-Credit/blob/audit/code4rena-2022-11-03/contracts/utils/LineLib.sol#L69
