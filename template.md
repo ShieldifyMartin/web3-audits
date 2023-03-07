@@ -36,4 +36,4 @@ The following number of issues were found, categorized by their severity:
 
 ## Disclaimer
 
-Smart contract reviews can never 100% guarantee the absence of vulnerabilities in the project. The author of the report takes no responsibility for damage arising in connection with this report.
+Smart contracts are an experimental technology with many known and unknown risks. The report assumes no reponsibility for any misbehavior, bugs or exploits affecting the audited code or any part of the deployment phase.
