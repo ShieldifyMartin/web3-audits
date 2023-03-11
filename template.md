@@ -1,6 +1,6 @@
 ## Introduction
 
-`Project name` security review was done by martin, with a main focus on the security aspects of the implementaion and logic of the project.
+`Project name` security review was done by martin, with a main focus on the security aspects of the implementation and logic of the project.
 
 ## Project Overview
 
