@@ -3,7 +3,7 @@
 ### This repository represents my portfolio of smart contract security audits.
 
 ## Info
-- 1st place out of 65 people in a Sherlock judging contest [Derby] (https://derby.finance/)
+- 1st place out of 65 people in a Sherlock judging contest [Derby](https://derby.finance/)
 - 100+ completed audit reports
 - several solo and team audits for clients
 
