@@ -1,19 +1,32 @@
-# [M-01] `emitUserMetadata` function may fail due to exceed gas limit
+# [M-01] Centralisation Vulnerability
 
-https://github.com/code-423n4/2023-01-drips/blob/main/src/DripsHub.sol#L613
+https://github.com/code-423n4/2023-01-drips/blob/main/src/DripsHub.sol#L386
+https://github.com/code-423n4/2023-01-drips/blob/main/src/DripsHub.sol#L409
+https://github.com/code-423n4/2023-01-drips/blob/main/src/NFTDriver.sol#L109
+https://github.com/code-423n4/2023-01-drips/blob/main/src/NFTDriver.sol#L133
+https://github.com/code-423n4/2023-01-drips/blob/main/src/NFTDriver.sol#L254
+https://github.com/code-423n4/2023-01-drips/blob/main/src/NFTDriver.sol#L263
+https://github.com/code-423n4/2023-01-drips/blob/main/src/NFTDriver.sol#L277
+https://github.com/code-423n4/2023-01-drips/blob/main/src/AddressDriver.sol#L60
+https://github.com/code-423n4/2023-01-drips/blob/main/src/AddressDriver.sol#L76
 
 ## Impact
 
-The function `emitUserMetadata` in `DripsHub` may fail due to unbounded loop over `userMetadata` can be very large due to the user input. However, function could be called only from drivers, it's still public and large array could be passed.
-And the loop in `emitUserMetadata` did not have a mechanism to stop, it’s only based on the array length, and may take all the gas limit. If the gas limit is reached, this transaction will fail or revert.
+It's a centralisation vulnerability if an owner or pauser can pause not only inbound, but outbound functionality. It's a best practice to be able to pause inbound (`registerDriver`, `updateDriverAddress`, `setDrips`, `setSplits`, `emitUserMetadata`, etc.) functionality but not outbound (`collect`, `give`) methods
 
 ## Proof of Concept
 
 ```solidity
-for (uint256 i = 0; i < userMetadata.length; i++) {
-    UserMetadata calldata metadata = userMetadata[i];
-    emit UserMetadataEmitted(userId, metadata.key, metadata.value);
-}
+function collect(uint256 userId, IERC20 erc20)
+    public
+    whenNotPaused
+    onlyDriver(userId)
+    returns (uint128 amt)
+
+function give(uint256 userId, uint256 receiver, IERC20 erc20, uint128 amt)
+    public
+    whenNotPaused
+    onlyDriver(userId)
 ```
 
 ## Tools Used
@@ -22,4 +35,4 @@ Manual audit
 
 ## Recommended Mitigation Steps
 
-Perform `userMetadata` length check and revert if necessary.
+Remove pausability (`whenNotPaused` modifier) from outbound functions.
