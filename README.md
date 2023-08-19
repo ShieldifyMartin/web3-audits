@@ -11,5 +11,6 @@
 
 I am available for smart contract security consulting. Reach out to me on:
 
-- Twitter - [@MartinPetrov033](https://twitter.com/MartinPetrov033)
+- Twitter - [@ShieldifyMartin](https://twitter.com/ShieldifyMartin)
 - Discord - [martin#7096](https://discordapp.com/users/599998587551612938)
+- Telegram - [@MartinShieldify](https://t.me/MartinShieldify)
