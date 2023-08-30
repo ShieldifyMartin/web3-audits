@@ -1,11 +1,11 @@
 # Martin's smart contract security reviews
 
-### This repository represents my portfolio of smart contract security audits.
+### This repository represents my portfolio of smart contract security reviews.
 
 ## Info
 - 1st place out of 65 people in a Sherlock judging contest [Derby](https://derby.finance/)
 - 100+ completed audit reports
-- several solo and team audits for clients
+- 20+ solo and team private audits
 
 ## Contacts
 
