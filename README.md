@@ -4,8 +4,8 @@
 
 ## Info
 - 1st place out of 65 people in a Sherlock judging contest [Derby](https://derby.finance/)
-- 100+ completed audit reports
-- 20+ solo and team private audits
+- 150+ completed audit reports
+- 30+ solo and team private audits
 
 ## Contacts
 
