@@ -2,10 +2,10 @@
 
 ### This repository represents my portfolio of smart contract security reviews.
 
-## Info
+## Stats
 - 1st place out of 65 people in a Sherlock judging contest [Derby](https://derby.finance/)
 - 150+ completed audit reports
-- 30+ solo and team private audits
+- 60+ solo and team private audits
 
 ## Contacts
 
